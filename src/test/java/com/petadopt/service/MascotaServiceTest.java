@@ -6,7 +6,6 @@ import com.petadopt.domain.Mascota;
 import com.petadopt.domain.Refugio;
 import com.petadopt.domain.SolicitudAdopcion;
 import com.petadopt.repository.*;
-import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -20,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 
-@ExtendWith(MockitoExtension.class)
+@ExtendWith(MockitoExtension.class) 
 class MascotaServiceTest {
 
     // --- CONFIGURACIÓN DE AISLAMIENTO Y MOCKS ---
@@ -33,8 +32,6 @@ class MascotaServiceTest {
 
     //SOLUCIÓN EJERCICIO 1
     @Test
-    @DisplayName("Procesar solicitud exitosa")
-
     void procesarSolicitudAdopcion_Exitoso() {
         // ARRANGE: prepara los datos de prueba
         Refugio refugioMock = new Refugio(100, "Refugio Cartago", "Cartago", "25500000");
@@ -72,7 +69,7 @@ class MascotaServiceTest {
 
     //SOLUCIÓN EJERCICIO 2
     @Test
-    @DisplayName(" Lanza excepción si el adoptante es menor de edad")
+    //error si es menor a 18
     void procesarSolicitudAdopcion_MenorDeEdad_LanzaExcepcion() {
        
         //ARRANGE
